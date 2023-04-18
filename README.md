@@ -1,1 +1,4 @@
-# JS-password-generator
+# JS-Password-Generator
+## About
+### Installations 
+#### Deployed Link
