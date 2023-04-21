@@ -7,3 +7,4 @@ The purpose of this challenge was to create an application that is used to gener
 Once downloaded users can click on the index.html page to open the webpage.
 Once on the webpage follow instructions from the prompts that will pop up to select criteria for the password that will be created.
 #### Deployed Link
+https://stevenarroyave8.github.io/JS-password-generator/
