@@ -24,13 +24,12 @@ var choices;
 // characters that can be included
 character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-space = [];
+alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 var toUpper = function (x) {
   return x.toUpperCase();
 };
-alpha2 = alpha.map(toUpper);
+alphabet2 = alphabet.map(toUpper);
 
 // function to generate password
 function generatePassword() {
@@ -45,3 +44,26 @@ function generatePassword() {
       confirmUppercase = confirm("Will this contain Uppercase letters?");
       confirmLowercase = confirm("Will this contain Lowercase letters?");
   };
+
+  // statements to determine choices
+  if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
+    choices = alert("You must choose a criteria!");
+} 
+  else if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
+  choices = character.concat(number, alphabet, alphabet2);
+}
+  else if (confirmCharacter && confirmNumber && confirmUppercase) {
+  choices = character.concat(number, alphabet2);
+}
+  else if (confirmCharacter && confirmNumber && confirmLowercase) {
+  choices = character.concat(number, alphabet);
+}
+  else if (confirmCharacter && confirmLowercase && confirmUppercase) {
+  choices = character.concat(alphabet, alphabet2);
+}
+  else if (confirmNumber && confirmLowercase && confirmUppercase) {
+  choices = number.concat(alphabet, alphabet2);
+}
+else if (confirmCharacter && confirmNumber) {
+  choices = character.concat(number);
+}
