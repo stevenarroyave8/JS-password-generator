@@ -1,3 +1,4 @@
+![challenge3 screenshot](https://user-images.githubusercontent.com/128537787/233533319-34f854ee-98db-4da3-928a-a6fc98e9c500.png)
 # JS-Password-Generator
 This weeks challenge required you to create an application that an employee can use to generate a random password based on criteria they've selected. 
 ## About
